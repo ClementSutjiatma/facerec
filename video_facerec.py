@@ -6,23 +6,33 @@ import cv2
 #   1. Process each video frame at 1/4 resolution (though still display it at full resolution)
 #   2. Only detect faces in every other frame of video.
 
-# PLEASE NOTE: This example requires OpenCV (the `cv2` library) to be installed only to read from your webcam.
-# OpenCV is *not* required to use the face_recognition library. It's only required if you want to run this
-# specific demo. If you have trouble installing it, try any of the other demos that don't require it instead.
-
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
 # Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("./known_people/Clement Sutjiatma.jpg")
-obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
+ishan_image = face_recognition.load_image_file("./known_people/Ishan Naidu.jpg")
+ishan_face_encoding = face_recognition.face_encodings(ishan_image)[0]
 
+tim_image = face_recognition.load_image_file("./known_people/Chon.jpg")
+tim_face_encoding = face_recognition.face_encodings(tim_image)[0]
+
+clement_image = face_recognition.load_image_file("./known_people/Clement Sutjiatma.jpg")
+clement_face_encoding = face_recognition.face_encodings(clement_image)[0]
+
+nikki_image = face_recognition.load_image_file("./known_people/Nikki Mikkilineni.jpg")
+nikki_face_encoding = face_recognition.face_encodings(nikki_image)[0]
 # Create arrays of known face encodings and their names
 known_face_encodings = [
-    obama_face_encoding
+    tim_face_encoding,
+    ishan_face_encoding,
+    clement_face_encoding,
+    nikki_face_encoding
 ]
 known_face_names = [
-    "Clement Sutjiatma"
+    "Tim Chon",
+    "Ishan Naidu",
+    "Clement Sutjiatma",
+    "Nikki Mikkilineni"
 ]
 
 # Initialize some variables
@@ -50,9 +60,9 @@ while True:
         face_names = []
         for face_encoding in face_encodings:
             # See if the face is a match for the known face(s)
-            matches = face_recognition.compare_faces(known_face_encodings, face_encoding)
+            matches = face_recognition.compare_faces(known_face_encodings, face_encoding, tolerance = 0.45)
             name = "Unknown"
-
+            print (matches)
             # If a match was found in known_face_encodings, just use the first one.
             if True in matches:
                 first_match_index = matches.index(True)

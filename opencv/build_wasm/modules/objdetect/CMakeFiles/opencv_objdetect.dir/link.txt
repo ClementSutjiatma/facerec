@@ -1,0 +1,1 @@
+/Users/Clemsut/emsdk/emscripten/incoming/emar rc ../../lib/libopencv_objdetect.a  @CMakeFiles/opencv_objdetect.dir/objects1.rsp
