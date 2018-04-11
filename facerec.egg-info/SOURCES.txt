@@ -1,0 +1,16 @@
+MANIFEST.in
+facerec/__init__.py
+facerec/facerec.py
+facerec/schema.sql
+facerec/video_facerec.py
+facerec.egg-info/PKG-INFO
+facerec.egg-info/SOURCES.txt
+facerec.egg-info/dependency_links.txt
+facerec.egg-info/requires.txt
+facerec.egg-info/top_level.txt
+facerec/static/opencv.js
+facerec/templates/.DS_Store
+facerec/templates/capturingvideoas.htm
+facerec/templates/index.html
+facerec/templates/verify_teacher.html
+facerec/templates/videocam.html

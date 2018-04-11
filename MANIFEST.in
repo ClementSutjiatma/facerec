@@ -1,0 +1,3 @@
+graft facerec/templates
+graft facerec/static
+include facerec/schema.sql

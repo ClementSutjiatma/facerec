@@ -1,0 +1,1 @@
+-isystem /Users/Clemsut/Desktop/facerec/opencv/build_wasm -I/Users/Clemsut/opencv/modules/core/include -I/Users/Clemsut/opencv/modules/core/src -I/Users/Clemsut/Desktop/facerec/opencv/build_wasm/modules/core -I/Users/Clemsut/opencv/3rdparty/zlib -I/Users/Clemsut/Desktop/facerec/opencv/build_wasm/3rdparty/zlib 

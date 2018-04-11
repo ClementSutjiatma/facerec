@@ -1,0 +1,1 @@
+from .facerec import app

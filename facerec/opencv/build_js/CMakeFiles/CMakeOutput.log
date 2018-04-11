@@ -1,0 +1,140 @@
+The target system is: Emscripten - 1 - x86
+The host system is: Darwin - 17.4.0 - x86_64
+The target system is: Emscripten - 1 - x86
+The host system is: Darwin - 17.4.0 - x86_64
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2de9a/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_2de9a.dir/build.make CMakeFiles/cmTC_2de9a.dir/build
+Building C object CMakeFiles/cmTC_2de9a.dir/CheckIncludeFile.c.o
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2 -fPIE   -o CMakeFiles/cmTC_2de9a.dir/CheckIncludeFile.c.o   -c /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2de9a.js
+/usr/local/Cellar/cmake/3.11.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2de9a.dir/link.txt --verbose=1
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2    -Wl,--gc-sections  -O2 @CMakeFiles/cmTC_2de9a.dir/objects1.rsp  -o cmTC_2de9a.js 
+
+
+Determining if the posix_memalign exist passed with the following output:
+Change Dir: /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cd7fc/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_cd7fc.dir/build.make CMakeFiles/cmTC_cd7fc.dir/build
+Building C object CMakeFiles/cmTC_cd7fc.dir/CheckSymbolExists.c.o
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2 -fPIE   -o CMakeFiles/cmTC_cd7fc.dir/CheckSymbolExists.c.o   -c /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_cd7fc.js
+/usr/local/Cellar/cmake/3.11.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd7fc.dir/link.txt --verbose=1
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2    -Wl,--gc-sections  -O2 @CMakeFiles/cmTC_cd7fc.dir/objects1.rsp  -o cmTC_cd7fc.js 
+
+File /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdlib.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef posix_memalign
+  return ((int*)(&posix_memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file malloc.h exists passed with the following output:
+Change Dir: /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fa762/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_fa762.dir/build.make CMakeFiles/cmTC_fa762.dir/build
+Building C object CMakeFiles/cmTC_fa762.dir/CheckIncludeFile.c.o
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2 -fPIE   -o CMakeFiles/cmTC_fa762.dir/CheckIncludeFile.c.o   -c /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_fa762.js
+/usr/local/Cellar/cmake/3.11.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa762.dir/link.txt --verbose=1
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2    -Wl,--gc-sections  -O2 @CMakeFiles/cmTC_fa762.dir/objects1.rsp  -o cmTC_fa762.js 
+
+
+Determining if the memalign exist passed with the following output:
+Change Dir: /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_49624/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_49624.dir/build.make CMakeFiles/cmTC_49624.dir/build
+Building C object CMakeFiles/cmTC_49624.dir/CheckSymbolExists.c.o
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2 -fPIE   -o CMakeFiles/cmTC_49624.dir/CheckSymbolExists.c.o   -c /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_49624.js
+/usr/local/Cellar/cmake/3.11.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49624.dir/link.txt --verbose=1
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2    -Wl,--gc-sections  -O2 @CMakeFiles/cmTC_49624.dir/objects1.rsp  -o cmTC_49624.js 
+
+File /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <malloc.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef memalign
+  return ((int*)(&memalign))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function fseeko exists passed with the following output:
+Change Dir: /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_56c43/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_56c43.dir/build.make CMakeFiles/cmTC_56c43.dir/build
+Building C object CMakeFiles/cmTC_56c43.dir/CheckFunctionExists.c.o
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=fseeko -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2 -fPIE   -o CMakeFiles/cmTC_56c43.dir/CheckFunctionExists.c.o   -c /usr/local/Cellar/cmake/3.11.0/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_56c43.js
+/usr/local/Cellar/cmake/3.11.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_56c43.dir/link.txt --verbose=1
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -DCHECK_FUNCTION_EXISTS=fseeko -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2    -Wl,--gc-sections  -O2 @CMakeFiles/cmTC_56c43.dir/objects1.rsp  -o cmTC_56c43.js 
+
+
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d40e6/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_d40e6.dir/build.make CMakeFiles/cmTC_d40e6.dir/build
+Building C object CMakeFiles/cmTC_d40e6.dir/CheckIncludeFile.c.o
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2 -fPIE   -o CMakeFiles/cmTC_d40e6.dir/CheckIncludeFile.c.o   -c /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_d40e6.js
+/usr/local/Cellar/cmake/3.11.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d40e6.dir/link.txt --verbose=1
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2    -Wl,--gc-sections  -O2 @CMakeFiles/cmTC_d40e6.dir/objects1.rsp  -o cmTC_d40e6.js 
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8e6b4/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_8e6b4.dir/build.make CMakeFiles/cmTC_8e6b4.dir/build
+Building C object CMakeFiles/cmTC_8e6b4.dir/CheckIncludeFile.c.o
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2 -fPIE   -o CMakeFiles/cmTC_8e6b4.dir/CheckIncludeFile.c.o   -c /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_8e6b4.js
+/usr/local/Cellar/cmake/3.11.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e6b4.dir/link.txt --verbose=1
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2    -Wl,--gc-sections  -O2 @CMakeFiles/cmTC_8e6b4.dir/objects1.rsp  -o cmTC_8e6b4.js 
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_17301/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_17301.dir/build.make CMakeFiles/cmTC_17301.dir/build
+Building C object CMakeFiles/cmTC_17301.dir/CheckIncludeFile.c.o
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2 -fPIE   -o CMakeFiles/cmTC_17301.dir/CheckIncludeFile.c.o   -c /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_17301.js
+/usr/local/Cellar/cmake/3.11.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_17301.dir/link.txt --verbose=1
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2    -Wl,--gc-sections  -O2 @CMakeFiles/cmTC_17301.dir/objects1.rsp  -o cmTC_17301.js 
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_50915/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_50915.dir/build.make CMakeFiles/cmTC_50915.dir/build
+Building C object CMakeFiles/cmTC_50915.dir/CheckIncludeFile.c.o
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2 -fPIE   -o CMakeFiles/cmTC_50915.dir/CheckIncludeFile.c.o   -c /Users/Clemsut/Desktop/facerec/opencv/build_js/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_50915.js
+/usr/local/Cellar/cmake/3.11.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50915.dir/link.txt --verbose=1
+/Users/Clemsut/emsdk/emscripten/1.37.36/emcc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-implicit-fallthrough -fdiagnostics-show-option -pthread -Qunused-arguments -fomit-frame-pointer -ffunction-sections -fdata-sections  -fvisibility=hidden -fvisibility-inlines-hidden -s ERROR_ON_UNDEFINED_SYMBOLS=1 -DNDEBUG -O2    -Wl,--gc-sections  -O2 @CMakeFiles/cmTC_50915.dir/objects1.rsp  -o cmTC_50915.js 
+
+
