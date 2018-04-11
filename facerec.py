@@ -6,7 +6,10 @@ import flask
 from flask import Flask, request, redirect, session, g, redirect, url_for, abort, render_template, flash, jsonify
 import face_recognition
 import sys
+import numpy
 
+
+PATH_TO_FACEREC = "/Users/Clemsut/Desktop/facerec/facerec"
 # You can change this to any folder on your system
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
@@ -68,9 +71,14 @@ def verify(request):
         return True, teacher_uniqname
     return False, "lonnybreaux"
 
-def get_name_encoding(course):
-
-    return "this", "that"
+def get_encoding_from_name(name):
+    encoding = []
+    directory = PATH_TO_FACEREC + "/data/known_people/" + name + "/encoding/" + name + ".txt"
+    if os.path.exists(directory):
+        encoding = numpy.loadtxt(directory, delimiter=',')
+        return True, encoding
+    else:
+        return False, encoding
 
 @app.route('/')
 def main_page():
@@ -82,7 +90,9 @@ def get_course():
         verification = verify(request)
         if not verification[0]:
             return '''<h1> Class Not Found </h1>'''
-        face_encoding= get_name_encoding(verification[1])
+        encoding_present, face_encoding = get_encoding_from_name(verification[1][0])
+        if not encoding_present:
+            return '''<h1> Teacher Not Found </h1>'''
     return flask.render_template('verify_teacher.html', teacher_encoding = face_encoding, teacher_name = verification[1])
 
 @app.route('/test', methods=['GET', 'POST'])

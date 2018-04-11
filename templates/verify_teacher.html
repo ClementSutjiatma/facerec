@@ -17,9 +17,6 @@
   </script>
   <script src="{{ url_for('static', filename='opencv.js') }}" onload="onOpenCvReady();" type="text/javascript"></script>
   <script async type="text/javascript">
-
-  encoding = {{teacher_encoding}}
-  name = {{teacher_name}}
   let video = document.getElementById('videoInput');
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
   .then(function(stream) {
