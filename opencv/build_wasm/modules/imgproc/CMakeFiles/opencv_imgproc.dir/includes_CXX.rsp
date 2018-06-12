@@ -1,1 +1,0 @@
--isystem /Users/Clemsut/Desktop/facerec/opencv/build_wasm -I/Users/Clemsut/opencv/modules/imgproc/include -I/Users/Clemsut/opencv/modules/imgproc/src -I/Users/Clemsut/Desktop/facerec/opencv/build_wasm/modules/imgproc -I/Users/Clemsut/opencv/modules/core/include 

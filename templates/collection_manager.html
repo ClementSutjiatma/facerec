@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../static/js/collectionManager.js"></script>
+
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.16.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="../static/js/AnonLog.js"></script>
+  <script src="../static/js/Loading.js"></script>
+  <link href="../static/css/simple.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Attendance Manager</title>
+</head>
+
+<body onload="AnonLog()">
+  <div style="margin-bottom: 70px;">
+  <h1 id="logo">facerec<span style="color:#08b8cd; font-size:25px">ollection manager</span></h1>
+</div>
+  <div id="loading"></div>
+  <div id="collectionManager">
+
+  <p id="opResult"></p>
+  <input id="Collection" type="text" placeholder="Collection Name">
+  <button style="color: white;" class="collection" onclick="addCollection()">add</button>
+  <button style="color: white;" class="collection"onclick="delCollection()">delete</button>
+  <button style="color: white;" class="collection" onclick="listCollections()">list</button>
+  <div style="margin-bottom:30px"></div>
+
+  <h2>Add Face</h2>
+  <form id="addFaceForm" method="POST" action="{{url_for('addFace')}}">
+    <input id="curCollection" name="curCollection" placeholder="Collection" type="text" required><br>
+    <input id="umid" name="umid" placeholder="UM ID" type="text" required><br>
+    <input id="uniqname" name="uniqname" placeholder="Uniqname" type="text" required><br>
+    <input id="first" name="first" placeholder="First Name" type="text" required><br>
+    <input id="last" name="last" placeholder="Last Name" type="text" required><br>
+    <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*" required>
+  </form>
+  <button id="submitFile" class="collection" style="width: 100%; color: white;">Add Face</button>
+  <form action='/' method='get'>
+    <input type="submit" value="Back to Main"></button>
+  </form>
+</div>
+<div id="footer"><p>Questions, Comments, Concerns: <a href="mailto:clemsut@umich.edu">clemsut@umich.edu</a></p></div>
+
+</body>
+<script type="text/javascript">
+
+document.getElementById("submitFile").addEventListener("click", function (event) {
+  ProcessImage();
+}, false);
+</script>
+
+</html>

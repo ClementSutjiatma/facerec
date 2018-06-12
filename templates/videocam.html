@@ -20,7 +20,7 @@
     document.getElementById('status').innerHTML = 'Video Process running.';
   }
   </script>
-  <script src="opencv/build_js/bin/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
+  <script src="../opencv/build_js_2/bin/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
   <script type="text/javascript">
   let video = document.getElementById('videoInput');
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
@@ -39,7 +39,7 @@
   let classifier = new cv.CascadeClassifier();
   let streaming = true;
   // load pre-trained classifiers
-  classifier_path = '/Users/Clemsut/Desktop/facerec/haarcascade_frontalface_default.xml';
+  classifier_path = '/Users/Clemsut/Desktop/facerec/facerec/data/classifiers/haarcascades/haarcascade_frontalface_default.xml';
   if(!classifier.load(classifier_path)){console.log("could not find frontalface classifier");};
   const FPS = 30;
   function processVideo() {

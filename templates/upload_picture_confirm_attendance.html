@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.16.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="../static/js/AnonLog.js"></script>
+  <script src="../static/js/confirmEnrollment.js"></script>
+  <link href="../static/css/simple.css" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <title>Facerec</title>
+</head>
+
+<body style="text-align:center;" onload="AnonLog();">
+  <h1 id="logo">facerec</h1>
+  <div id="loading"> </div>
+  <div id="content" style="width: 550px; margin-top:50px;">
+
+    <H2>Course: <span id="course">{{ course }}</span></H2>
+    <div id="container" style="width: 500px; height: 375px;">
+      <video autoplay="true" id="videoElement" style="width: 500px; height: 375px;">
+      </video>
+    </div>
+    <H2>Hit submit to verify your attendance!</H2>
+    <canvas id="imageOutput"></canvas>
+    <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
+    <button id="submitFace">Submit</button>
+    <p id="opResult"></p>
+    <input id="takePicture" type="button" disabled="true" value="Take Picture"></input>
+  </div>
+  <form action="/" method="get">
+    <input type="submit" value="Back to Main" style="width : 400px;">
+  </form>
+  <div id="footer"><p>Questions, Comments, Concerns: <a href="mailto:clemsut@umich.edu">clemsut@umich.edu</a></p></div>
+
+</body>
+<script>
+function loaderOff(){
+  $("#loading").css("display", "none");
+}
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+var video = document.getElementById("videoElement");
+var takePicButton = document.getElementById("takePicture");
+
+if (navigator.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({video: true}
+  ).then(gotMedia).catch(error => console.error('getUserMedia() error:', error));
+}
+function gotMedia(mediaStream) {
+  const mediaStreamTrack = mediaStream.getVideoTracks()[0];
+  const imageCapture = new ImageCapture(mediaStreamTrack);
+  video.srcObject = mediaStream;
+  takePicButton.disabled = false;
+  takePicture.onclick = function() {
+    imageCapture.takePhoto().then(blob => {
+      /*const img = document.querySelector('img');
+      img.src = URL.createObjectURL(blob);
+      img.onload = () => { URL.revokeObjectURL(this.src); } */
+      ProcessImage(blob);
+    })
+    .catch(error => console.error('takePhoto() error:', error));
+  };
+}
+
+document.getElementById("submitFace").addEventListener("click", function (event) {
+  var control = document.getElementById("fileToUpload");
+  var file = control.files[0];
+  ProcessImage(file);
+}, false);
+
+</script>
+
+</html>
