@@ -14,6 +14,8 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 app = Flask(__name__,static_url_path='/static') # create the application instance :)
 app.config.from_object(__name__) # load config from this file , flaskr.py
 mysql = MySQL()
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'

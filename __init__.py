@@ -1,1 +1,1 @@
-from .facerec import app
+from .main import app

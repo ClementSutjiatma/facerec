@@ -22,6 +22,8 @@
       <video autoplay="true" id="videoElement" style="width: 500px; height: 375px;">
       </video>
     </div>
+    <img src="#.gif" height="300" width="400">
+
     <H2>Hit submit to verify your attendance!</H2>
     <canvas id="imageOutput"></canvas>
     <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
@@ -55,10 +57,11 @@ function gotMedia(mediaStream) {
   takePicButton.disabled = false;
   takePicture.onclick = function() {
     imageCapture.takePhoto().then(blob => {
-      /*const img = document.querySelector('img');
+      const img = document.querySelector('img');
       img.src = URL.createObjectURL(blob);
-      img.onload = () => { URL.revokeObjectURL(this.src); } */
+      img.onload = () => { URL.revokeObjectURL(this.src); }
       ProcessImage(blob);
+      console.log(blob);
     })
     .catch(error => console.error('takePhoto() error:', error));
   };
