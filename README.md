@@ -1,4 +1,4 @@
-# Facerec - An Attendance Tracking Web App
+# Facerec - An Attendance Tracking Web App with Facial Recognition
 
 Facerec leverages AWS Rekognition's facial recognition capabilities to create a webpage that allows students to 
 confirm their attendance from their phones or laptops. Student simply needs to input their course number and take 
