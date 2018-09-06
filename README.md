@@ -5,4 +5,4 @@ confirm their attendance from their phones or laptops. Student simply needs to i
 a selfie on the portal to confirm attendance. Facial recognition ensures that the student is a valid and enrolled member
 of the class. 
 
-[![Watch the demo](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/Qea20YHEuD0)
+[![Watch the demo](https://github.com/ClementSutjiatma/facerec/blob/master/static/Screen%20Shot%202018-09-06%20at%206.20.14%20PM.png)](https://youtu.be/Qea20YHEuD0)
